@@ -1,0 +1,15 @@
+version: '3.1'
+
+services:
+  viewer:
+    image: jeremydouglass/we1s-notebook-viewer:latest
+    ports:
+      - "10002:80"
+    environment:
+      - NGINX_PORT=80
+      # - NGINX_HOST=
+    volumes:
+      - viewer-data:/usr/share/nginx/html:ro
+
+volumes:
+  viewer-data:
