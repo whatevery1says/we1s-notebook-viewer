@@ -2,7 +2,7 @@
 
 To drop into a running container shell for testing and development:
 
-(Note: `ginx:alpine` has only `sh`, not `bash`)
+(Note: `nginx:alpine` has only `sh`, not `bash`)
 
 -  via Docker on host command line:
    -  `docker exec -it <containerIdOrName> sh`
