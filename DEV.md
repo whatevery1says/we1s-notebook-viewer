@@ -14,9 +14,7 @@ To drop into a running container shell for testing and development:
 
 To test configurations from a shell inside a running container:
 
--  In terminal:
-   -  edit settings:  
-	     `vi etc/nginx/conf.d/default.conf`
-   -  reload settings without restarting ngingx / container:
-      `nginx -s reload`
-
+    # edit the configuration file
+    vi etc/nginx/conf.d/default.conf
+    # reload settings without restarting ngingx / container
+    nginx -s reload
