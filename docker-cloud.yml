@@ -11,5 +11,17 @@ services:
     volumes:
       - viewer-data:/usr/share/nginx/html:ro
 
+  notebook:
+    image: 'jeremydouglass/we1s-notebook'
+    user: '1000:100'
+    ports:
+      - '8888:8888'
+    volumes:
+      - viewer-data:/home/jovyan/view:z
+    environment:
+      - GRANT_SUDO=${JUPYTER_GRANT_SUDO}
+      - JUPYTER_TOKEN=${JUPYTER_TOKEN}
+      - PASSWORD=${JUPYTER_PASSWORD}
+
 volumes:
   viewer-data:
